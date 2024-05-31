@@ -1,0 +1,10 @@
+<div class="row m-0 d-flex justify-content-between">
+    <div style="width: 50%;">
+        <button (click)="pay(500)" style="width: 200px;">Pay Now</button>
+       <div *ngFor="let item of App">
+        <span class="mx-2">{{item.App_name}}</span>
+        <input type="radio" (click)="GetAppid(item)" [value]="item.App_id" name="Payment">
+       </div>       
+    </div>
+    <button style="width: 200px;" [routerLink]="['/config']">Seetings</button>
+</div>
